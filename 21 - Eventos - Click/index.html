@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Eventos - Click</title>
+</head>
+<body>
+
+	<h4 id="title">Meu botão</h4>
+	<button id="btn">Click</button>
+
+	<script>
+		var botao = document.getElementById('btn')
+		var title = document.getElementById('title')
+
+		botao.addEventListener('click', function(){
+			alert('Você clicou')
+			title.remove()
+		})
+	</script>
+
+</body>
+</html>

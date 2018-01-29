@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Functions</title>
+</head>
+<body>
+
+	<script>
+		// function nomeDaFuncao(){
+		// 	return 1
+		// }
+
+		// function nomeDaFuncao(valor){
+		// 	return valor
+		// }
+		// console.log(nomeDaFuncao(2+2))
+
+		// function calculaMedia(nota1,nota2,nota3){
+		// 	return (nota1+nota2+nota3)/3
+		// }
+
+		var pessoa = {
+			nome: 'Marcondes',
+			idade: 36,
+			profissao: 'Programador',
+			cidade: 'Rio de Janeiro'
+		}
+
+		function novaPessoa(novoObjetoPessoa){
+			pessoa = novoObjetoPessoa
+			if(typeof novoObjetoPessoa == 'object'){
+				pessoa = novoObjetoPessoa
+				return true
+			}else{
+				return false
+			}
+		}
+
+		function testeParametros(){
+			console.log(arguments[0])
+		}
+
+	</script>
+
+</body>
+</html>
