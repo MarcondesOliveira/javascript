@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery - Position e Offset</title>
+
+	<style>
+		.container{
+			width: 500px;
+			height: 500px;
+			background-color: black;
+			position: absolute;
+			top: 200px;
+			left: 300px;
+			padding: 20px;
+		}
+		.item{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="item"></div>
+	</div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <script>
+  		var container = $('.container')
+  		var item = $('.item')
+
+  		var posicao = item.offset()
+
+  		console.log(posicao.left, posicao.top)
+
+  </script>
+
+</body>
+</html>

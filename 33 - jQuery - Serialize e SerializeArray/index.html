@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Serialize e SerializeArray</title>
+
+	<style>
+
+		input{
+			display: block;
+		}
+		button{
+			color: white;
+			background-color: green;
+			padding: 1rem;
+		}
+	</style>
+</head>
+<body>
+
+	<form action="#">
+		<label for="cep">CEP</label>
+		<input type="text" name="cep" id="cep" placeholder="00000-000">
+
+		<label for="logradouro">Logradouro</label>
+		<input type="text" name="logradouro" id="logradouro" placeholder="Avenida exemplo de tal">
+
+		<button>Submit</button>
+	</form>
+
+	<br>
+	<br>
+	<br>
+
+	<div class="resultado"></div>
+
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <script>
+  	var form = $('form')
+  	var resultado = $('.resultado')
+
+  	form.on('submit', function(event){
+  		event.preventDefault()
+
+  		var data = $(this).serializeArray()
+
+  		console.log(data)
+
+  	})
+  </script>
+
+</body>
+</html>
