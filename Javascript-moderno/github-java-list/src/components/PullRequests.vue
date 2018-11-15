@@ -6,12 +6,14 @@
       
     </header>
 
+    <router-link :to="{ name: 'Home' }">Volta</router-link>
+    <router-view/>
+
     <ul>
       <li>
         Pulls
       </li>
-    </ul>
-    
+    </ul>    
     
   </div>
 </template>
@@ -20,16 +22,14 @@
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
-const ENDPOINT = 'https://api.github.com/search/repositories?q=language:Java&sort=stars&page=1&per_page=100'
+const ENDPOINT = 'https://api.github.com/repos/:owner/:repo/pulls?state=all'
 
 export default {
   name: 'Pull-Requests',
   data () {
     return {
       msg: 'Pull Requests',
-      pulls: [
-        {pulls_url: ''},
-      ],
+      data: [],
     }
   },
   mounted(){
