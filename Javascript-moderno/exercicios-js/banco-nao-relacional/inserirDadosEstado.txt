@@ -5,6 +5,7 @@ db.estados.insert({
     sigla: "RJ",
     regiao: "Sudeste",
     cidades: [{
+        _id: ObjectId(),
         nome: "Niterói",
         sigla: "RJ",
         area: 133.9,
